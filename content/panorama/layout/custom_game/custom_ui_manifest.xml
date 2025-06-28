@@ -4,5 +4,10 @@
     </scripts>
     <Panel>
         <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/hud.xml" />
+        <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/neutral_items_button.xml" />
+        <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/neutral_shop.xml" />
+        <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/repick_hero_button.xml" />
+        <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/repick_menu.xml" />
+        <!-- <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/facet_selector.xml"/> -->
     </Panel>
 </root>

@@ -1,0 +1,25 @@
+<root>
+  <!-- Include CSS styles -->
+  <styles>
+    <include src="file://{resources}/styles/custom_game/neutral_item_shop_button.css" />
+  </styles>
+  
+  <!-- Include JavaScript -->
+  <scripts>
+    <include src="file://{resources}/scripts/custom_game/neutral_item_shop_button.js" />
+  </scripts>
+  
+  <snippets>
+  
+  </snippets>
+  <!-- Main container panel -->
+  
+  <Panel hittest="false" class="MainContainer" >
+    
+<Button id="NeutralItemsButton" onactivate="onNeutralButtonClicked()">
+    <!-- Neutral items button icon -->
+  <Label class="NeutralItemsButtonLabel" text="Neutral Items"/>
+</Button>
+    
+  </Panel>
+</root>

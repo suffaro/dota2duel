@@ -1,0 +1,107 @@
+.AddonLoadingRoot {
+  width: 100%;
+  height: 100%;
+  /* background-color: black; */
+  background-image: url("file://{images}/custom_game/loading_screen_background.png");
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#TitlePanel {
+  horizontal-align: left;
+  vertical-align: bottom;
+  margin-bottom: 150px;
+  margin-left: 100px;
+  flow-children: right;
+}
+
+#AddonTitle {
+  margin-bottom: -15px;
+  vertical-align: center;
+  text-transform: uppercase;
+  font-size: 80px;
+  color: #cccccc;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+/* Settings Menu Styles */
+#SettingsMenu {
+  horizontal-align: left;
+  vertical-align: top;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 300px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #444444;
+  border-radius: 8px;
+  flow-children: down;
+}
+
+#SettingsTitle {
+  font-size: 24px;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+  margin-bottom: 10px;
+  horizontal-align: center;
+  font-weight: bold;
+}
+
+/* Setting Row styling */
+.SettingRow {
+  flow-children: right;
+  width: 100%;
+  margin-bottom: 8px;
+  height: 30px;
+  vertical-align: center;
+}
+
+.SettingLabel {
+  color: #cccccc;
+  font-size: 14px;
+  text-shadow: 1px 1px 1px #000000;
+  width: 60%;
+  vertical-align: center;
+}
+
+.SettingButton {
+  width: 40%;
+  height: 25px;
+  background-color: rgba(0, 255, 0, 0.2);
+  border: 1px solid #00aa00;
+  border-radius: 3px;
+  vertical-align: center;
+}
+
+.SettingButton Label {
+  color: #00ff00;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000000;
+  horizontal-align: center;
+  vertical-align: center;
+}
+
+.SettingButton:hover {
+  background-color: rgba(0, 255, 0, 0.3);
+  border-color: #00ff00;
+}
+
+.SettingButton.disabled {
+  background-color: rgba(255, 170, 0, 0.2);
+  border-color: #ffaa00;
+}
+
+.SettingButton.disabled Label {
+  color: #ffaa00;
+}
+
+.SettingButton.false {
+  background-color: rgba(255, 0, 0, 0.2);
+  border-color: #aa0000;
+}
+
+.SettingButton.false Label {
+  color: #ff0000;
+}

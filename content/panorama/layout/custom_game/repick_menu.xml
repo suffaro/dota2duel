@@ -1,0 +1,67 @@
+<root>
+  <styles>
+    <include src="file://{resources}/styles/custom_game/repick_menu.css" />
+  </styles>
+  
+  <scripts>
+    <include src="file://{resources}/scripts/custom_game/repick_menu.js" />
+  </scripts>
+  
+  <Panel hittest='false' class="RepickFormPanelContainer"> 
+    <Panel id="RepickFormPanel">
+      <Panel class="RepickHeader">
+        <Label class="RepickTitle" text="Hero Repick" />
+        <!-- Use onactivate for Panorama buttons -->
+        <Button id="CloseRepickButton" class="CloseRepickButton" onactivate="onCloseRepickMenu()">
+          <Label class="CloseRepickButtonText" text="X" />
+        </Button>
+      </Panel>
+    
+      <Panel class="RepickContent">
+        
+        <Panel class="AttributeCategory StrengthCategory">
+          <Label class="CategoryTitle" text="STRENGTH" />
+          <!-- Added ID, removed hardcoded hero slots -->
+          <Panel class="CategoryHeroGrid" id="StrengthHeroGrid">
+            <!-- Heroes will be populated by JS -->
+          </Panel>
+        </Panel>
+
+        <Panel class="AttributeCategory AgilityCategory">
+          <Label class="CategoryTitle" text="AGILITY" />
+          <!-- Added ID, removed hardcoded hero slots -->
+          <Panel class="CategoryHeroGrid" id="AgilityHeroGrid">
+            <!-- Heroes will be populated by JS -->
+          </Panel>
+        </Panel>
+
+        <Panel class="AttributeCategory IntelligenceCategory">
+          <Label class="CategoryTitle" text="INTELLIGENCE" />
+          <!-- Added ID, removed hardcoded hero slots -->
+          <Panel class="CategoryHeroGrid" id="IntelligenceHeroGrid">
+            <!-- Heroes will be populated by JS -->
+          </Panel>
+        </Panel>
+
+        <Panel class="AttributeCategory UniversalCategory">
+          <Label class="CategoryTitle" text="UNIVERSAL" />
+          <!-- Added ID, removed hardcoded hero slots -->
+          <Panel class="CategoryHeroGrid" id="UniversalHeroGrid">
+            <!-- Heroes will be populated by JS -->
+          </Panel>
+        </Panel>
+        
+      </Panel>
+    
+      <Panel class="RepickButtonContainer">
+        <!-- Added onactivate and ensured initial state matches JS -->
+        <Button id="SelectHeroButton" class="SelectHeroButton disabled" onactivate="onSelectHeroButtonPressed()">
+          <Label class="SelectHeroButtonText" text="SELECT" />
+        </Button>
+        <Button id="RandomHeroButton" class="RandomHeroButton enabled" onactivate="onRandomHeroButtonPressed()">
+          <Label class="RandomHeroButtonText" text="RANDOM" />
+        </Button>
+      </Panel>
+    </Panel>
+  </Panel>
+</root>

@@ -1,0 +1,215 @@
+<root>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/neutral_shop.js" />
+    </scripts>
+
+    <styles>
+        <include src="file://{resources}/styles/custom_game/neutral_shop.css" />
+    </styles>
+
+    <Panel hittest="false"  class="MainContainer">
+        <Panel id="NeutralShopPanel" class="NeutralShopPanel"> <!-- Initial visibility is controlled by CSS -->
+            <!-- Header Section -->
+            <Panel class="ShopHeader">
+                <Label class="NeutralShopTitle" text="Neutral Shop" />
+                <!-- Using × for a more standard close icon -->
+                <Button id="CloseNeutralShopButton" class="CloseNeutralShopButton" onactivate="OnCloseNeutralShopButtonClicked()">
+                    <Label text="×" class="CloseButtonText" />
+                </Button>
+            </Panel>
+            
+            <!-- Main Content Area -->
+            <Panel class="ShopContent">
+                <!-- Left Side - Neutral Items -->
+                <Panel class="ShopSection">
+                    <Label class="SectionTitle" text="Neutral Items" />
+                    <Panel class="ItemsContainer">
+                        <!-- Existing Pirate Hat -->
+                        <!-- <Panel class="ItemSlot" id="item_pirate_hat" onactivate="SelectItem('pirate_hat')"
+                               onmouseover="DOTAShowAbilityTooltip('item_pirate_hat')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="ItemImage" itemname="item_pirate_hat" />
+                            <Label class="ItemName" text="#DOTA_Tooltip_ability_item_pirate_hat" />
+                        </Panel> -->
+                        <!-- Added Neutral Items -->
+                        <Panel class="ItemSlot" id="item_desolator_2" onactivate="SelectItem('desolator_2')"
+                               onmouseover="DOTAShowAbilityTooltip('item_desolator_2')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="ItemImage" itemname="item_desolator_2" />
+                            <Label class="ItemName" text="#DOTA_Tooltip_ability_item_desolator_2" />
+                        </Panel>
+                        <Panel class="ItemSlot" id="item_fallen_sky" onactivate="SelectItem('fallen_sky')"
+                               onmouseover="DOTAShowAbilityTooltip('item_fallen_sky')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="ItemImage" itemname="item_fallen_sky" />
+                            <Label class="ItemName" text="#DOTA_Tooltip_ability_item_fallen_sky" />
+                        </Panel>
+                        <Panel class="ItemSlot" id="item_demonicon" onactivate="SelectItem('demonicon')"
+                               onmouseover="DOTAShowAbilityTooltip('item_demonicon')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="ItemImage" itemname="item_demonicon" />
+                            <Label class="ItemName" text="#DOTA_Tooltip_ability_item_demonicon" />
+                        </Panel>
+                         <Panel class="ItemSlot" id="item_minotaur_horn" onactivate="SelectItem('minotaur_horn')"
+                               onmouseover="DOTAShowAbilityTooltip('item_minotaur_horn')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="ItemImage" itemname="item_minotaur_horn" />
+                            <Label class="ItemName" text="#DOTA_Tooltip_ability_item_minotaur_horn" />
+                        </Panel>
+                        <Panel class="ItemSlot" id="item_spider_legs" onactivate="SelectItem('spider_legs')"
+                               onmouseover="DOTAShowAbilityTooltip('item_spider_legs')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="ItemImage" itemname="item_spider_legs" />
+                            <Label class="ItemName" text="#DOTA_Tooltip_ability_item_spider_legs" />
+                        </Panel>
+                        <!-- <Panel class="ItemSlot" id="item_panic_button" onactivate="SelectItem('panic_button')"
+                               onmouseover="DOTAShowAbilityTooltip('item_panic_button')" 
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="ItemImage" itemname="item_panic_button" />
+                            <Label class="ItemName" text="#DOTA_Tooltip_ability_item_panic_button" />
+                        </Panel> -->
+                        <Panel class="ItemSlot" id="item_unrelenting_eye" onactivate="SelectItem('unrelenting_eye')"
+                               onmouseover="DOTAShowAbilityTooltip('item_unrelenting_eye')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="ItemImage" itemname="item_unrelenting_eye" />
+                            <Label class="ItemName" text="#DOTA_Tooltip_ability_item_unrelenting_eye" />
+                        </Panel>
+                        <!-- Force Boots from original example, ensure it's distinct if pirate_hat was also an example -->
+                        <!-- <Panel class="ItemSlot" id="item_force_boots" onactivate="SelectItem('force_boots')"
+                               onmouseover="DOTAShowAbilityTooltip('item_force_boots')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="ItemImage" itemname="item_force_boots" />
+                            <Label class="ItemName" text="#DOTA_Tooltip_ability_item_force_boots" />
+                        </Panel> -->
+                    </Panel>
+                </Panel>
+                
+                <!-- Right Side - Enchantments -->
+                <Panel class="ShopSection">
+                    <Label class="SectionTitle" text="Enchantments" />
+                    <Panel class="EnchantmentsContainer"> <!-- COMMENTED WEAK ENCHANTEMENTS TIER 1 - 4-->
+                        <!-- Original Enchantments (Alert, Tough) -->
+                         <!-- <Panel class="EnchantmentSlot" id="enchant_alert" onactivate="SelectEnchantment('item_enhancement_alert')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_alert')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_alert" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_alert" />
+                        </Panel>
+                        <Panel class="EnchantmentSlot" id="enchant_tough" onactivate="SelectEnchantment('item_enhancement_tough')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_tough')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_tough" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_tough" />
+                        </Panel> -->
+
+                        <!-- Added Enchantments -->
+                        <!-- <Panel class="EnchantmentSlot" id="enchant_mystical" onactivate="SelectEnchantment('item_enhancement_mystical')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_mystical')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_mystical" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_mystical" />
+                        </Panel>
+                        <Panel class="EnchantmentSlot" id="enchant_brawny" onactivate="SelectEnchantment('item_enhancement_brawny')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_brawny')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_brawny" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_brawny" />
+                        </Panel>
+                         <Panel class="EnchantmentSlot" id="enchant_quickened" onactivate="SelectEnchantment('item_enhancement_quickened')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_quickened')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_quickened" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_quickened" />
+                        </Panel>
+                        <Panel class="EnchantmentSlot" id="enchant_keen_eyed" onactivate="SelectEnchantment('item_enhancement_keen_eyed')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_keen_eyed')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_keen_eyed" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_keen_eyed" />
+                        </Panel>
+                        <Panel class="EnchantmentSlot" id="enchant_vast" onactivate="SelectEnchantment('item_enhancement_vast')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_vast')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_vast" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_vast" />
+                        </Panel>
+                        <Panel class="EnchantmentSlot" id="enchant_greedy" onactivate="SelectEnchantment('item_enhancement_greedy')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_greedy')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_greedy" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_greedy" />
+                        </Panel>
+                        <Panel class="EnchantmentSlot" id="enchant_vampiric" onactivate="SelectEnchantment('item_enhancement_vampiric')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_vampiric')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_vampiric" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_vampiric" />
+                        </Panel> -->
+                        <Panel class="EnchantmentSlot" id="enchant_timeless" onactivate="SelectEnchantment('item_enhancement_timeless')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_timeless')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_timeless" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_timeless" />
+                        </Panel>
+                        <Panel class="EnchantmentSlot" id="enchant_titanic" onactivate="SelectEnchantment('item_enhancement_titanic')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_titanic')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_titanic" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_titanic" />
+                        </Panel>
+                        <Panel class="EnchantmentSlot" id="enchant_crude" onactivate="SelectEnchantment('item_enhancement_crude')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_crude')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_crude" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_crude" />
+                        </Panel>
+                        <Panel class="EnchantmentSlot" id="enchant_feverish" onactivate="SelectEnchantment('item_enhancement_feverish')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_feverish')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_feverish" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_feverish" />
+                        </Panel>
+                        <Panel class="EnchantmentSlot" id="enchant_fleetfooted" onactivate="SelectEnchantment('item_enhancement_fleetfooted')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_fleetfooted')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_fleetfooted" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_fleetfooted" />
+                        </Panel>
+                        <Panel class="EnchantmentSlot" id="enchant_audacious" onactivate="SelectEnchantment('item_enhancement_audacious')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_audacious')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_audacious" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_audacious" />
+                        </Panel>
+                        <Panel class="EnchantmentSlot" id="enchant_evolved" onactivate="SelectEnchantment('item_enhancement_evolved')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_evolved')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_evolved" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_evolved" />
+                        </Panel>
+                        <Panel class="EnchantmentSlot" id="enchant_boundless" onactivate="SelectEnchantment('item_enhancement_boundless')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_boundless')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_boundless" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_boundless" />
+                        </Panel>
+                         <Panel class="EnchantmentSlot" id="enchant_wise" onactivate="SelectEnchantment('item_enhancement_wise')"
+                               onmouseover="DOTAShowAbilityTooltip('item_enhancement_wise')"
+                               onmouseout="DOTAHideAbilityTooltip()">
+                            <DOTAItemImage class="EnchantmentIcon" itemname="item_enhancement_wise" />
+                            <Label class="EnchantmentName" text="#DOTA_Tooltip_ability_item_enhancement_wise" />
+                        </Panel>
+                    </Panel>
+                </Panel>
+            </Panel>
+            
+            <!-- Bottom Section - Craft Button -->
+            <Panel class="ShopFooter">
+                <!-- Ensure CraftItemButton ID is unique and targeted correctly by JS -->
+                <Button id="CraftItemButton" class="CraftButton disabled" onactivate="OnCraftItemButtonClicked()" enabled="false">
+                    <Label text="Craft Item" class="CraftButtonText" />
+                </Button>
+            </Panel>
+        </Panel>
+    </Panel>
+</root>

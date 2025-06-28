@@ -1,0 +1,25 @@
+<root>
+  <!-- Include CSS styles -->
+  <styles>
+    <include src="file://{resources}/styles/custom_game/repick_hero_button.css" />
+  </styles>
+  
+  <!-- Include JavaScript -->
+  <scripts>
+    <include src="file://{resources}/scripts/custom_game/repick_hero_button.js" />
+  </scripts>
+  
+  <snippets>
+  
+  </snippets>
+  <!-- Main container panel -->
+  
+  <Panel hittest="false" class="MainContainerRepickButton" >
+    
+<Button id="RepickHeroButton" onactivate="openRepickMenu()">
+    <!-- Neutral items button icon -->
+  <Label class="RepickHeroButtonLabel" text="Repick Hero"/>
+</Button>
+    
+  </Panel>
+</root>

@@ -1,0 +1,40 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/facet_selector.css" />
+	</styles>
+
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/facet_selector.js" />
+	</scripts>
+
+	<Panel class="FacetSelectionRoot" hittest="false">
+		<!-- Main Container -->
+		<Panel id="FacetSelectionContainer" class="FacetSelectionContainer Hidden">
+			<!-- Header -->
+			<Panel class="FacetHeader">
+				<Label id="HeroNameLabel" class="HeroNameLabel" text="Select Hero Facet" />
+				<Button id="CloseButton" class="CloseButton" onactivate="CloseFacetSelection()">
+					<Label text="✕" />
+				</Button>
+			</Panel>
+
+			<!-- Facets Grid -->
+			<Panel id="FacetsGrid" class="FacetsGrid">
+				<!-- Facet cards will be dynamically created here -->
+			</Panel>
+
+			<!-- Action Buttons -->
+			<Panel class="ActionButtons">
+				<Button id="ConfirmButton" class="ConfirmButton Disabled" onactivate="ConfirmFacetSelection()">
+					<Label text="Confirm Selection" />
+				</Button>
+				<Button id="CancelButton" class="CancelButton" onactivate="CloseFacetSelection()">
+					<Label text="Cancel" />
+				</Button>
+			</Panel>
+		</Panel>
+
+		<!-- Background Overlay -->
+		<Panel id="BackgroundOverlay" class="BackgroundOverlay Hidden" onactivate="CloseFacetSelection()" />
+	</Panel>
+</root>

@@ -1,0 +1,53 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/custom_loading_screen.css"/>
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/custom_loading_screen.js"/>
+	</scripts>
+	<Panel class="AddonLoadingRoot">
+		<!-- Settings Menu Panel -->
+		<Panel id="SettingsMenu">
+			<Label id="SettingsTitle" text="Game Settings" />
+			
+			<!-- <Panel class="SettingRow">
+				<Label class="SettingLabel" text="Rapier Enabled:" />
+				<Button id="RapierButton" class="SettingButton" onactivate="toggleRapier()">
+					<Label text="TRUE" />
+				</Button>
+			</Panel>
+			
+			<Panel class="SettingRow">
+				<Label class="SettingLabel" text="Divine Regalia Enabled:" />
+				<Button id="DivineRegaliaButton" class="SettingButton" onactivate="toggleDivineRegalia()">
+					<Label text="TRUE" />
+				</Button>
+			</Panel> -->
+			
+			<Panel class="SettingRow">
+				<Label class="SettingLabel" text="Gem Effect on Heroes:" />
+				<Button id="GemEffectButton" class="SettingButton" onactivate="toggleGemEffect()">
+					<Label text="TRUE" />
+				</Button>
+			</Panel>
+			
+			<!-- <Panel class="SettingRow">
+				<Label class="SettingLabel" text="Add Tier1-Tier4 Enchantments:" />
+				<Button id="EnchantsButton" class="SettingButton" onactivate="toggleEnchants()">
+					<Label text="TRUE" />
+				</Button>
+			</Panel>
+			
+			<Panel class="SettingRow">
+				<Label class="SettingLabel" text="Add Runes Spawn:" />
+				<Button id="RunesButton" class="SettingButton" onactivate="toggleRunesSpawn()">
+					<Label text="TRUE" />
+				</Button>
+			</Panel>
+		</Panel> -->
+		
+		<Panel id="TitlePanel">
+			<!-- <Label id="AddonTitle" text="Dota 2 Duel" style=""/> -->
+		</Panel>
+	</Panel>
+</root>

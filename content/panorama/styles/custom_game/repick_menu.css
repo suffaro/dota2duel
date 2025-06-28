@@ -1,0 +1,269 @@
+.RepickFormPanelContainer {
+  width: 100%;
+  height: 100%;
+  horizontal-align: center;
+  vertical-align: center;
+}
+
+#RepickFormPanel {
+  visibility: collapse;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 26, 46, 0.97);
+  border: 3px solid #4a90e2;
+  border-radius: 12px;
+  flow-children: down;
+  box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.6);
+}
+
+.RepickHeader {
+  width: 100%;
+  height: 60px;
+  flow-children: right;
+  background-color: #2d3748;
+  border-bottom: 2px solid #4a90e2;
+  border-radius: 10px 10px 0px 0px;
+  padding: 0px 20px;
+  vertical-align: center;
+}
+
+.RepickTitle {
+  font-size: 26px;
+  font-weight: bold;
+  color: #e2e8f0;
+  horizontal-align: left;
+  vertical-align: center;
+  margin-left: 10px;
+}
+
+.CloseRepickButton {
+  width: 38px;
+  height: 38px;
+  background-color: #e53e3e;
+  border: 1px solid #fc8181;
+  border-radius: 50%;
+  horizontal-align: right;
+  vertical-align: center;
+  margin-right: 5px;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.CloseRepickButton:hover {
+  background-color: #fc8181;
+}
+
+.CloseRepickButton:active {
+  background-color: #c53030;
+}
+
+.CloseRepickButtonText {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  horizontal-align: center;
+  vertical-align: center;
+  line-height: 36px;
+}
+
+.RepickContent {
+  width: 100%;
+  height: fill-parent-flow(1.0);
+  flow-children: right;
+  padding: 15px;
+}
+
+.AttributeCategory {
+  width: 25%;
+  /* Back to 25% for 4 equal columns */
+  height: 100%;
+  flow-children: down;
+  background-color: rgba(35, 40, 58, 0.5);
+  border: 1px solid #3b475f;
+  border-radius: 8px;
+  margin: 0px 0px;
+  /* Remove margin to eliminate gaps */
+  padding: 8px;
+  min-width: 250px;
+  /* Ensure minimum usable width */
+}
+
+.AttributeCategory:first-child {
+  margin-left: 0;
+}
+
+.AttributeCategory:last-child {
+  margin-right: 0;
+}
+
+.CategoryTitle {
+  width: 100%;
+  height: 35px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #cbd5e0;
+  text-align: center;
+  horizontal-align: center;
+  vertical-align: center;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid #4a5568;
+  padding-bottom: 5px;
+}
+
+.CategoryHeroGrid {
+  width: 100%;
+  height: fill-parent-flow(1.0);
+  flow-children: right-wrap;
+  horizontal-align: left;
+  vertical-align: top;
+  overflow: squish scroll;
+  padding: 2px 0px;
+}
+
+.HeroSlot {
+  width: 23.66%;
+  /* 6 columns */
+  height: 90px;
+  /* Increased height for 3:2 ratio (if width is ~50px, height should be ~75px) */
+  margin: 0.1%;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+}
+
+.HeroSlotInner {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 20, 0.3);
+  border: 1px solid #2c3342;
+  border-radius: 4px;
+  padding: 1px;
+  transition-property: box-shadow, border-color, background-color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+}
+
+.HeroSlot DOTAHeroImage {
+  width: 100%;
+  height: 100%;
+}
+
+.HeroSlot:hover {
+  transform: translateY(-2px);
+}
+
+.HeroSlot:hover .HeroSlotInner {
+  border-color: #5a98e4;
+  box-shadow: 0px 2px 8px rgba(74, 144, 226, 0.4);
+}
+
+.HeroSlot:active {
+  transform: translateY(0px);
+}
+
+.HeroSlot:active .HeroSlotInner {
+  box-shadow: 0px 0px 5px rgba(74, 144, 226, 0.2);
+}
+
+.HeroSlot.selected .HeroSlotInner {
+  border-color: #63b3ed;
+  box-shadow: 0px 0px 12px rgba(90, 160, 230, 0.7);
+  background-color: rgba(74, 144, 226, 0.25);
+}
+
+.HeroName {
+  font-size: 8px;
+  font-weight: normal;
+  color: #a0aec0;
+  text-align: center;
+  horizontal-align: center;
+  vertical-align: bottom;
+  width: 100%;
+  text-overflow: clip;
+  margin-top: 1px;
+  visibility: collapse;
+}
+
+.RepickButtonContainer {
+  width: 100%;
+  height: 70px;
+  flow-children: right;
+  horizontal-align: center;
+  vertical-align: center;
+  background-color: #2d3748;
+  border-top: 2px solid #4a90e2;
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px 20px;
+}
+
+.RepickButtonContainer Button {
+  min-width: 140px;
+  height: 44px;
+  border-radius: 6px;
+  padding: 0px 20px;
+  margin: 0px 10px;
+  horizontal-align: center;
+  vertical-align: center;
+  transition-property: background-color, border-color, opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.RepickButtonContainer Button Label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f7fafc;
+  text-align: center;
+  horizontal-align: center;
+  vertical-align: center;
+}
+
+.SelectHeroButton {
+  background-color: #38a169;
+  border: 1px solid #68d391;
+}
+
+.SelectHeroButton:hover {
+  background-color: #48bb78;
+  border-color: #78c9a1;
+}
+
+.SelectHeroButton:active {
+  background-color: #2f855a;
+}
+
+.RandomHeroButton {
+  background-color: #d69e2e;
+  border: 1px solid #f6e05e;
+}
+
+.RandomHeroButton:hover {
+  background-color: #ecc94b;
+  border-color: #f8e87e;
+}
+
+.RandomHeroButton:active {
+  background-color: #b7791f;
+}
+
+.SelectHeroButton.enabled,
+.RandomHeroButton.enabled {
+  opacity: 1.0;
+}
+
+.SelectHeroButton.disabled,
+.RandomHeroButton.disabled {
+  background-color: #4a5568 !important;
+  border-color: #718096 !important;
+  opacity: 0.5;
+}
+
+.SelectHeroButton.disabled:hover,
+.RandomHeroButton.disabled:hover {
+  background-color: #4a5568 !important;
+  border-color: #718096 !important;
+}
